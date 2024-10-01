@@ -3,7 +3,7 @@
 $connection = mysqli_connect('localhost','root','','student_info');
         
         if(!$connection){
-            die("Not connected.". mysqli_error($connectio));
+            die("Not connected.". mysqli_error($connection));
         }
 
         $query ="SELECT * FROM student";
@@ -40,7 +40,7 @@ $connection = mysqli_connect('localhost','root','','student_info');
                     <td><?php echo $firstname?></td>
                     <td><?php echo $lastname?></td>
                     <td><?php echo $phone?></td>
-                    <td><a href="#">Delet</a></td>
+                    <td><a href="delete.php?id= <?php echo $id ?>">Delet</a></td>
                     <td><a href="#">Update</a></td>
 
                 </tr>

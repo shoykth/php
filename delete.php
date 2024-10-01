@@ -1,15 +1,17 @@
 <?php
-    $conn = mysqli_connect('localhost','root','','student_info');
+    $connection = mysqli_connect('localhost','root','','student_info');
 
-    if(!$conn){
+    if(!$connection){
         die("Not connected.". mysqli_error($conn));
     }
 
-    //echo $rec = $_REQUEST["id"];
+    $rec = $_REQUEST["id"];
 
-    //$query = "DELETE FROM student WHERE id = 13";
+    $query = "DELETE FROM student WHERE id = $rec";
 
-    //$run_delete_qurey = mysqli_query($connection, $query);
-    
-    
+    $run_delete_qurey = mysqli_query($connection, $query);
+
+    if ($run_delete_qurey) {
+        header("location: index3.php?deleted");
+    }
 ?>
