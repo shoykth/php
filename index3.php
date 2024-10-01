@@ -41,6 +41,8 @@ $connection = mysqli_connect('localhost','root','','student_info');
                     <td><?php echo $lastname?></td>
                     <td><?php echo $phone?></td>
                     <td><a href="#">Delet</a></td>
+                    <td><a href="#">Update</a></td>
+
                 </tr>
                 <br>
             </tbody>

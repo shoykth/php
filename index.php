@@ -7,7 +7,7 @@
         $connection = mysqli_connect('localhost','root','','student_info');
         
         if(!$connection){
-            die("Not connected.". mysqli_error());
+            die("Not connected.". mysqli_error($connection));
         }
 
         $query = "INSERT INTO student ( firstname, lastname, phone)";

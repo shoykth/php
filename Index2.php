@@ -4,7 +4,7 @@
 $connection = mysqli_connect('localhost','root','','student_info');
         
         if(!$connection){
-            die("Not connected.". mysqli_error($connectio));
+            die("Not connected.". mysqli_error($connection));
         }
 
         $query ="SELECT * FROM `student` WHERE 1";
@@ -16,12 +16,12 @@ $connection = mysqli_connect('localhost','root','','student_info');
         if ($count > 0) {
             while( $row = mysqli_fetch_assoc($showtable)){
            
-                echo "{$row['firstname']}";
-                echo"<br>";
+                //echo "{$row['firstname']}";
+                //echo"<br>";
                  //simple
-                 // echo"<pre>";
-                 //     print_r($row);
-                 // echo"</pre>";
+                 echo"<pre>";
+                     print_r($row);
+                 echo"</pre>";
              }
         }else{
             echo("DOnt have any data");
