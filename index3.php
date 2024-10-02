@@ -41,7 +41,7 @@ $connection = mysqli_connect('localhost','root','','student_info');
                     <td><?php echo $lastname?></td>
                     <td><?php echo $phone?></td>
                     <td><a href="delete.php?id= <?php echo $id ?>">Delet</a></td>
-                    <td><a href="#">Update</a></td>
+                    <td><a href="single_data.php?edit_id<?php echo $id?>">Update</a></td>
 
                 </tr>
                 <br>
